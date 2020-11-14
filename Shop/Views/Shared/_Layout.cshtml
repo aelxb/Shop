@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ИНТЕРНЕТ-МАГАЗИН</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet1.css" />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:black">
+        <div class="container" style="background-color:black">
+            <div class="navbar-header" style="background-color:black">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="background-color:black">
+                    <span class="icon-bar" style="background-color:black"></span>
+                    <span class="icon-bar" style="background-color:black"></span>
+                    <span class="icon-bar" style="background-color:black"></span>
+                    <span class="icon-bar" style="background-color:black"></span>
+                </button>
+                @Html.ActionLink("Веломагазин", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" style="background-color:black">
+                <ul class="nav navbar-nav" style="background-color:black">
+                    <li style="background-color:black">@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                    <li style="background-color:black">@Html.ActionLink("Информация", "About", "Home")</li>
+                    <li style="background-color:black">@Html.ActionLink("Доставка", "Contact", "Home")</li>
+                    <li style="background-color:black">@Html.ActionLink("Каталог", "Korzina", "Home")</li>
+                    <li style="background-color:black">@Html.ActionLink("Личный кабинет", "LCab", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p> </p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

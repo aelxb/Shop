@@ -1,0 +1,37 @@
+﻿<br />
+<br />
+<br />
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/css/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <img src="~/images/colorful-bicycle-background.jpg" width="1050" />
+    <div class="row" style="background-color:white">
+        <div class="col-md-4" style="background-color:white">
+            <h2>@Html.ActionLink("Перейти к покупкам", "Korzina", "Home")</h2>
+            <p>Более 7 штук разных вариантов велосипедов и запчастей к вышеупомянутым транспортным средствам. Самый широкий ассортимент в П50-1-18</p>
+            <p><button class="btn btn-default">@Html.ActionLink("Каталог", "Korzina", "Home")</button></p>
+        </div>
+
+        <div class="col-md-4" style="background-color:white">
+            <h2>@Html.ActionLink("Перейти к доставке", "Contact", "Home")</h2>
+            <p>Доставка, самовывоз, адрес магазина, мы на карте</p>
+            <br />
+            <br />
+            <br />
+            <p><button class="btn btn-default"> @Html.ActionLink("Доставка", "Contact", "Home")</button></p>
+        </div>
+        <div class="col-md-4" style="background-color:white">
+            <h2> @Html.ActionLink("О нас", "About", "Home")</h2>
+            <p>Всё, что вы хотели знать о нашей компании. Контакты, явки, пароли, адреса всякие разные и тому подобное. </p>
+            <br />
+            <br />
+            <p><button class="btn btn-default">@Html.ActionLink("Информация", "About", "Home")</button></p>
+        </div>
+    </div>
+    <img src="~/images/colorful-bicycle-background.jpg" width="1050" />
+</body>

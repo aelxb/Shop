@@ -1,0 +1,29 @@
+﻿<br />
+<br />
+<br />
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Регистрация</h2>
+<link href="~/css/StyleSheet1.css" rel="stylesheet" />
+<body>
+    <form action="/Cnt/Index" method="post">
+        <table>
+            <tr>
+                <td>Придумайте логин:</td>
+                <td> <input type="text" name="message" /></td>
+            </tr>
+            <tr>
+                <td>Придумайте пароль:</td>
+                <td><input type="password" name="password" /></td>
+            </tr>
+            <tr>
+                <td>Запишите почту:</td>
+                <td> <input type="text" name="email" /></td>
+                <td><input type="submit" value="send" /></td>
+            </tr>
+        </table>
+    </form>
+    <img src="~/Content/colorful-bicycle-background.jpg" width="1050" />
+    <img src="~/Content/colorful-bicycle-background.jpg" width="1050" />
+</body>
