@@ -28,6 +28,8 @@ namespace Shop
             services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(
            "Data Source=KUDAHTER\\BORISOVALEX; Database=Beda_S_BD; Persist Security Info=False; MultipleActiveResultSets=True; Trusted_Connection=True;"
            ));
+            services.AddDistributedMemoryCache();
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -35,7 +37,7 @@ namespace Shop
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();
- 
+            app.UseSession();
             app.UseStaticFiles();
  
             app.UseRouting();

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Shop.Models.Product>
+
+<h1>Товары</h1>
+
+@foreach (var Product in Model)
+
+{
+
+    <li>@Product.Title_Product <a href="/Cart/AddToCart?ID=@Product.ID_Product">Добавить в корзину</a></li>
+
+}
+
+<hr />
+
+<a href="/Cart">Корзина</a>
+}
