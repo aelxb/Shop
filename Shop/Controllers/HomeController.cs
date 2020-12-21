@@ -48,6 +48,21 @@ namespace Shop.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> Create(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Users.Add(user);
+                await db.SaveChangesAsync();
+                return Content("");
+            }
+            else
+            {
+                return View(user);
+            }
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

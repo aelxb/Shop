@@ -1,0 +1,18 @@
+﻿@model Shop.Models.User
+
+<form asp-antiforgery="true" asp-controller="Home" asp-action="Create">
+    <div class="validation" asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email_User"></label>
+        <input asp-for="Email_User" />
+        <span asp-validation-for="Email_User"></span>
+    </div>
+    <div>
+        <label asp-for="Password_User"></label>
+        <input asp-for="Password_User" />
+        <span asp-validation-for="Password_User"></span>
+    </div>
+    <div>
+        <input type="submit" value="Отправить" />
+    </div>
+</form>

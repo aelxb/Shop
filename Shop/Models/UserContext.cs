@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Shop.Models
 {
-    public class ApplicationContext : DbContext
+    public class UserContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
+        public UserContext(DbContextOptions<UserContext> options)
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
     }
 }
-

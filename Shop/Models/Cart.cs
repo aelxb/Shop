@@ -9,33 +9,27 @@ namespace Shop.Models
     {
         public Cart()
         {
-            CartLines = new List<Product>;
+            CartLines = new List<Products>();
         }
-    public List<Product> CartLines { get; set; }
+        public List<Products> CartLines { get; set; }
 
-    // Вычисление итоговой стоимости
+        // Вычисление итоговой стоимости
 
-    public int FinalPrice
-
-    {
-
-        get
-
+        public int FinalPrice
         {
-
-            int sum = 0;
-
-            foreach (Product product in CartLines)
+            get
             {
+                int sum = 0;
 
-                sum += product.Price_Product;
+                foreach (Products product in CartLines)
+                {
+                    sum += product.Price_Product;
+
+                }
+                return sum;
 
             }
 
-            return sum;
-
         }
-
     }
-
 }
